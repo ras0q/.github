@@ -1,0 +1,67 @@
+# Ref: https://github.com/vitejs/vite/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml
+name: "Bug report"
+description: "Report a bug or unexpected behavior"
+title: "[Bug] "
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this issue!
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is
+      placeholder: |
+        What I expected: ...
+        What actually happened: ...
+    validations:
+      required: true
+  - type: input
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Please provide a minimal reproduction. A [minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example) is required so we can understand and fix the issue.
+      placeholder: Reproduction URL or minimal code example
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to reproduce
+      description: Steps or a minimal code example to reproduce the issue
+      placeholder: |
+        1. Step 1
+        2. Step 2
+        3. ...
+  - type: textarea
+    id: system-info
+    attributes:
+      label: System Info
+      description: Relevant system and environment information
+      placeholder: |
+        - OS: [e.g., Ubuntu 22.04]
+        - Other relevant info
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Optional. Paste any relevant error messages or logs
+      render: shell
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Before submitting the issue, please make sure you do the following
+      options:
+        - label: I have read the Contributing Guidelines
+          required: true
+        - label: I have searched for existing issues and found none
+          required: true
+        - label: I have provided a [minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
+          required: true
+        - label: This is a concrete bug, not a question or discussion
+          required: true

@@ -1,0 +1,50 @@
+# Ref: https://github.com/vitejs/vite/blob/main/.github/ISSUE_TEMPLATE/feature_request.yml
+name: "Feature request"
+description: "Propose a new feature or enhancement"
+title: "[Feature] "
+type: feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in proposing a new feature!
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Clear and concise description of the feature. Explain the problem you're trying to solve and the use case.
+      placeholder: |
+        As a developer, I want [goal/wish] so that [benefit].
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Suggested solution
+      description: Describe how you would like this feature to be implemented
+      placeholder: |
+        In [module/component] we could provide...
+    validations:
+      required: true
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Alternative solutions
+      description: Clear and concise description of any alternative solutions or features you've considered
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Any other context or examples about the feature request
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Before submitting the issue, please make sure you do the following
+      options:
+        - label: I have read the Contributing Guidelines
+          required: true
+        - label: I have searched for existing feature requests and found none
+          required: true
+        - label: This is a concrete proposal, not a question
+          required: true
