@@ -51,7 +51,7 @@ repositories:
       topics: [go, error-handling]
   - name: noy
     spec:
-      description: "A simple, lightweight wrapper for Go's standard http.ServeMux that brings strongly-typed, request-local state to your HTTP handlers."
+      description: "A tiny wrapper around Go's http.ServeMux for typed request-local state shared by middleware and handlers."
       topics: [go]
   - name: obsidian-graph-banner
     spec:
