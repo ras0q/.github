@@ -1,0 +1,59 @@
+apiVersion: gh-infra/v1
+kind: RepositorySet
+metadata:
+  owner: ras0q
+
+defaults:
+  spec:
+    visibility: public
+    archived: false
+    features:
+      # NOTE: Sponsorship feature is not supporteb by the API yet.
+      issues: true
+      projects: false
+      wiki: false
+      discussions: true
+      pull_requests: true
+    merge_strategy:
+      allow_merge_commit: false
+      allow_squash_merge: true
+      allow_rebase_merge: false
+      allow_auto_merge: true
+      auto_delete_head_branches: true
+      squash_merge_commit_title: COMMIT_OR_PR_TITLE
+      squash_merge_commit_message: COMMIT_MESSAGES
+    release_immutability: true
+    security:
+      vulnerability_alerts: true
+      automated_security_fixes: true
+      private_vulnerability_reporting: true
+    rulesets:
+      - name: main
+        target: branch
+        enforcement: active
+        conditions:
+          ref_name:
+            include:
+              - ~DEFAULT_BRANCH
+        rules:
+          non_fast_forward: true
+          deletion: true
+          creation: false
+
+repositories:
+  - name: cute
+    spec:
+      description: "Cute: A CLI tool that exeCUTEs commands from markdown files — also works as a zsh/fish plugin."
+      topics: [task-runner, fish-plugin, zsh-plugin]
+  - name: goalie
+    spec:
+      description: "🥅 Capture errors from `defer`'d cleanup functions. Reliably!"
+      topics: [go, error-handling]
+  - name: noy
+    spec:
+      description: "A simple, lightweight wrapper for Go's standard http.ServeMux that brings strongly-typed, request-local state to your HTTP handlers."
+      topics: [go]
+  - name: obsidian-graph-banner
+    spec:
+      description: "An Obsidian plugin to display a relation graph view on the note header."
+      topics: [obsidian-md, obsidian-plugin]
