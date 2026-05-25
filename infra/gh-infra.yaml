@@ -41,6 +41,10 @@ defaults:
           creation: false
 
 repositories:
+  - name: actuate
+    spec:
+      description: Async phase management for SwiftUI
+      topics: [swift, swiftui, concurrency]
   - name: cute
     spec:
       description: "Cute: A CLI tool that exeCUTEs commands from markdown files — also works as a zsh/fish plugin."
