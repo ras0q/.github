@@ -53,6 +53,10 @@ repositories:
     spec:
       description: "🥅 Capture errors from `defer`'d cleanup functions. Reliably!"
       topics: [go, error-handling]
+  - name: jsonschema2lua
+    spec:
+      description: "A Deno CLI that generates LuaLS-compatible Lua type annotations from JSON Schema."
+      topics: [json-schema, lua]
   - name: noy
     spec:
       description: "A tiny wrapper around Go's http.ServeMux for typed request-local state shared by middleware and handlers."
