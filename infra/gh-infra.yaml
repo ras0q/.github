@@ -65,3 +65,7 @@ repositories:
     spec:
       description: "An Obsidian plugin to display a relation graph view on the note header."
       topics: [obsidian-md, obsidian-plugin]
+  - name: pndr
+    spec:
+      description: "Shell prompt status for coding agents, with attach/detach session control."
+      topics: ["coding-agent", "shell"]
