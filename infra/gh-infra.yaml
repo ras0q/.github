@@ -65,6 +65,10 @@ repositories:
     spec:
       description: "An Obsidian plugin to display a relation graph view on the note header."
       topics: [obsidian-md, obsidian-plugin]
+  - name: opml-feed-digest
+    spec:
+      description: "Turn OPML feeds into a concise Markdown digest with a GitHub Action."
+      topics: [github-actions, opml]
   - name: pndr
     spec:
       description: "Shell prompt status for coding agents, with attach/detach session control."
