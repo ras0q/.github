@@ -40,6 +40,7 @@ defaults:
           deletion: true
           creation: false
 
+# Repository specs ordered by repository name asc
 repositories:
   - name: actuate
     spec:
@@ -73,3 +74,7 @@ repositories:
     spec:
       description: "Shell prompt status for coding agents, with attach/detach session control."
       topics: ["coding-agent", "shell"]
+  - name: starred-releases-feed
+    spec:
+      description: "Turn GitHub starred repositories into a daily Atom feed with a GitHub Action."
+      topics: [atom, github-actions, rss]
