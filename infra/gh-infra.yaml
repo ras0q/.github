@@ -70,6 +70,10 @@ repositories:
     spec:
       description: "Turn OPML feeds into a concise Markdown digest with a GitHub Action."
       topics: [github-actions, opml]
+  - name: optplus.nvim
+    spec:
+      description: "Better implementations for Neovim's built-in options."
+      topics: [neovim, neovim-plugin, lua]
   - name: pndr
     spec:
       description: "Shell prompt status for coding agents, with attach/detach session control."
