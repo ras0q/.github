@@ -79,6 +79,10 @@ repositories:
     spec:
       description: "Better implementations for Neovim's built-in options."
       topics: [neovim, neovim-plugin, lua]
+  - name: pao
+    spec:
+      description: Context-aware async resources for Bubble Tea v2.
+      topics: [go, bubbletea, tui]
   - name: pndr
     spec:
       description: "Shell prompt status for coding agents, with attach/detach session control."
