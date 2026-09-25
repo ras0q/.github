@@ -83,6 +83,10 @@ repositories:
     spec:
       description: Context-aware async resources for Bubble Tea v2.
       topics: [go, bubbletea, tui]
+  - name: permish
+    spec:
+      description: "Run install scripts with Deno's permission prompts instead of curl | sh."
+      topics: [deno, jsr, security]
   - name: pndr
     spec:
       description: "Shell prompt status for coding agents, with attach/detach session control."
