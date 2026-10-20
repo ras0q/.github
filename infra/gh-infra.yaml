@@ -42,6 +42,10 @@ defaults:
 
 # Repository specs ordered by repository name asc
 repositories:
+  - name: .github
+    spec:
+      description: "@ras0q's GitHub config"
+      topics: [github-config]
   - name: actuate
     spec:
       description: Async phase management for SwiftUI
