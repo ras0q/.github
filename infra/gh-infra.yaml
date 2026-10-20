@@ -54,10 +54,6 @@ repositories:
     spec:
       description: "Cute: A CLI tool that exeCUTEs commands from markdown files — also works as a zsh/fish plugin."
       topics: [task-runner, fish-plugin, zsh-plugin]
-  - name: dotfiles
-    spec:
-      description: "./install.sh"
-      topics: [dotfiles]
   - name: goalie
     spec:
       description: "🥅 Capture errors from `defer`'d cleanup functions. Reliably!"
