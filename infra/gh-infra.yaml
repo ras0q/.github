@@ -8,7 +8,7 @@ defaults:
     visibility: public
     archived: false
     features:
-      # NOTE: Sponsorship feature is not supporteb by the API yet.
+      # NOTE: Sponsorship feature is not supported by the API yet.
       issues: true
       projects: false
       wiki: false
