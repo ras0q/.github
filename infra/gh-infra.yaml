@@ -99,3 +99,7 @@ repositories:
     spec:
       description: "Turn GitHub starred repositories into a daily Atom feed with a GitHub Action."
       topics: [atom, github-actions, rss]
+  - name: tr
+    spec:
+      description: "manage CLIs in your package.json"
+      topics: [npm, npm-registry]
