@@ -9,11 +9,28 @@ on:
 jobs:
   apply:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # github.token posts the commit comment
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - run: gh extension install babarot/gh-infra
         env:
           GITHUB_TOKEN: ${{ github.token }}
+      - id: plan
+        run: gh infra plan ./infra --detailed-exitcode -o markdown > plan.md || echo "code=$?" >> "$GITHUB_OUTPUT"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_INFRA_TOKEN }}
+      - if: steps.plan.outputs.code == '2'
+        env:
+          GITHUB_TOKEN: ${{ github.token }} # comment as github-actions[bot]
+        run: |
+          [ -s plan.md ] || exit 0
+          jq -n --rawfile body plan.md '{body: $body}' \
+            | gh api --method POST \
+                "/repos/${{ github.repository }}/commits/${{ github.sha }}/comments" \
+                --input -
+      - if: steps.plan.outputs.code == '1'
+        run: exit 1
       - run: gh infra apply ./infra --auto-approve
         env:
           GITHUB_TOKEN: ${{ secrets.GH_INFRA_TOKEN }}
