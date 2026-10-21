@@ -101,5 +101,5 @@ repositories:
       topics: [atom, github-actions, rss]
   - name: tr
     spec:
-      description: "manage CLIs in your package.json"
+      description: "The tool registry. Your CLI tools, managed with npm"
       topics: [npm, npm-registry]
