@@ -102,6 +102,7 @@ repositories:
   - name: thus
     spec:
       description: A test DSL that separates the behavior under test from setup and observation
+      homepage: https://crates.io/crates/thus
       topics: [rust, testing]
   - name: tr
     spec:
