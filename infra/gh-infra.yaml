@@ -99,6 +99,10 @@ repositories:
     spec:
       description: "Turn GitHub starred repositories into a daily Atom feed with a GitHub Action."
       topics: [atom, github-actions, rss]
+  - name: thus
+    spec:
+      description: A test DSL that separates the behavior under test from setup and observation
+      topics: [rust, testing]
   - name: tr
     spec:
       description: "The tool registry. Your CLI tools, managed with npm"
